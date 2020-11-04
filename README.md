@@ -10,6 +10,10 @@
 npm install --save @infi-knight/line-chart-react
 ```
 
+## Demo
+
+[codesandbox](https://codesandbox.io/s/infi-knightline-chart-react-r3zk0)
+
 ## Usage
 
 ```jsx
@@ -32,7 +36,7 @@ const chartConfig = {
   showAxes: true // set to falset to disable ticks on axes
 }
 
-// A single line chart can render multiple lines (see image above)
+// A single line chart can render multiple lines (see image below)
 // styles is optional and defaults to { lineColor: 'black', lineWidht: 2 }
 const chartItems = [
   {
