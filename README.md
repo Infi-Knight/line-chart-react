@@ -31,13 +31,13 @@ const chartConfig = {
   maxY: 120,
   height: 500,
   width: 500,
-  unitsPerTickX: 10, 
+  unitsPerTickX: 10,
   unitsPerTickY: 10,
   showAxes: true // set to falset to disable ticks on axes
 }
 
 // A single line chart can render multiple lines (see image below)
-// styles is optional and defaults to { lineColor: 'black', lineWidht: 2 }
+// styles is optional and defaults to { lineColor: 'rebeccapurple', lineWidht: 2 }
 const chartItems = [
   {
     styles: { lineColor: 'blue', lineWidth: 2 },
@@ -116,7 +116,6 @@ const App = () => {
 }
 
 export default App
-
 ```
 
 Result:
@@ -164,7 +163,6 @@ This creates a production build of the example `create-react-app` that showcases
 ## TODO:
 
 - fix canvas scaling on HiDpi screens
-
 
 ## License
 

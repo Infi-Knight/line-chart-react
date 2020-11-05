@@ -1,4 +1,10 @@
-import { PADDING, TICK_SIZE, POINT_RADIUS, FONT_HEIGHT } from './constants'
+import {
+  PADDING,
+  TICK_SIZE,
+  POINT_RADIUS,
+  FONT_HEIGHT,
+  FONT
+} from './constants'
 
 export class LineChartDrawer {
   constructor({
@@ -23,6 +29,7 @@ export class LineChartDrawer {
     this.tickSize = TICK_SIZE
     this.pointRadius = POINT_RADIUS
     this.fontHeight = FONT_HEIGHT // prevent axes labels from getting cutoff
+    this.font = FONT
 
     this.context = this.canvas.getContext('2d')
     this.rangeX = this.maxX - this.minY

@@ -2,15 +2,20 @@ import React, { useRef, useEffect } from 'react'
 
 import { DEFAULT_LINE_STYLES } from './constants'
 import { LineChartDrawer } from './LineChartDrawer'
+import { scaleCanvasForHiDpi } from './scalefix'
 
 export const Canvas = ({ chartConfig, chartItems }) => {
-  const { id, height, width, ...lineCharDrawerInput } = chartConfig
+  const { id, height, width, ...lineChartDrawerInput } = chartConfig
 
   const canvasRef = useRef(null)
   useEffect(() => {
     const canvas = canvasRef.current
+
+    // scale the canvas appropriately for retina screens
+    scaleCanvasForHiDpi(canvas, height, width)
+
     const lineChartDrawer = new LineChartDrawer({
-      ...lineCharDrawerInput,
+      ...lineChartDrawerInput,
       canvas
     })
 
@@ -21,7 +26,7 @@ export const Canvas = ({ chartConfig, chartItems }) => {
       } = item
       lineChartDrawer.drawLine(points, lineColor, lineWidth)
     })
-  }, [LineChartDrawer, chartConfig, chartItems])
+  }, [LineChartDrawer, chartConfig, chartItems, scaleCanvasForHiDpi])
 
   return <canvas id={id} height={height} width={width} ref={canvasRef} />
 }
