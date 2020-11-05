@@ -162,7 +162,7 @@ This creates a production build of the example `create-react-app` that showcases
 
 ## TODO:
 
-- fix canvas scaling on HiDpi screens
+- ~~fix canvas scaling on HiDpi screens~~
 
 ## License
 
